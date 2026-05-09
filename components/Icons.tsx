@@ -83,3 +83,54 @@ export const BriefcaseIcon = (props: Props) => (
     <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
   </svg>
 );
+
+export const MailIcon = (props: Props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <path d="m3 7 9 6 9-6" />
+  </svg>
+);
+
+export const ChevronRight = (props: Props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <polyline points="9 6 15 12 9 18" />
+  </svg>
+);
+
+/**
+ * Decorative gold ornament: ◆ — ◆ — ◆
+ * Used under section headings as a luxury divider.
+ */
+export const GoldOrnament = (props: Props) => (
+  <svg viewBox="0 0 80 8" fill="currentColor" aria-hidden {...props}>
+    <path d="M4 4l3-3 3 3-3 3z" />
+    <rect x="11" y="3.6" width="22" height="0.8" />
+    <path d="M37 4l3-3 3 3-3 3z" />
+    <rect x="44" y="3.6" width="22" height="0.8" />
+    <path d="M70 4l3-3 3 3-3 3z" />
+  </svg>
+);
+
+/**
+ * Simplified mandala / lotus emblem — used in the footer bottom bar.
+ */
+export const MandalaIcon = (props: Props) => (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <circle cx="32" cy="32" r="4" />
+    {Array.from({ length: 8 }).map((_, i) => {
+      const angle = (i * Math.PI * 2) / 8;
+      const x1 = 32 + 6 * Math.cos(angle);
+      const y1 = 32 + 6 * Math.sin(angle);
+      const x2 = 32 + 14 * Math.cos(angle);
+      const y2 = 32 + 14 * Math.sin(angle);
+      const x3 = 32 + 22 * Math.cos(angle);
+      const y3 = 32 + 22 * Math.sin(angle);
+      return (
+        <g key={i}>
+          <path d={`M${x1} ${y1} Q${x2 + 4 * Math.cos(angle + Math.PI / 2)} ${y2 + 4 * Math.sin(angle + Math.PI / 2)} ${x3} ${y3} Q${x2 - 4 * Math.cos(angle + Math.PI / 2)} ${y2 - 4 * Math.sin(angle + Math.PI / 2)} ${x1} ${y1}Z`} />
+        </g>
+      );
+    })}
+    <circle cx="32" cy="32" r="28" strokeDasharray="2 3" opacity="0.6" />
+  </svg>
+);
