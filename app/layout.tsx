@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileBar from "@/components/StickyMobileBar";
 import InquiryModalMount from "@/components/InquiryModalMount";
-import ThankYouModal from "@/components/ThankYouModal";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -172,7 +171,6 @@ export default function RootLayout({
           <Footer />
           <StickyMobileBar />
           <InquiryModalMount />
-          <ThankYouModal />
         </ModalProvider>
       </body>
     </html>
