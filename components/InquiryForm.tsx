@@ -5,8 +5,10 @@ import CustomSelect, { SelectOption } from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 import { PACKAGES } from "@/lib/packages";
 import { waUrl } from "@/lib/whatsapp";
-import { useInquiryModal } from "./ModalProvider";
 import { WhatsAppIcon, CheckIcon, ArrowRight, ShieldCheck } from "./Icons";
+
+const INQUIRY_ENDPOINT =
+  process.env.NEXT_PUBLIC_INQUIRY_ENDPOINT || "/api/inquiry";
 
 type Props = {
   prefilledPackage?: string;
@@ -69,7 +71,6 @@ export default function InquiryForm({ prefilledPackage }: Props) {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const captchaRef = useRef<CaptchaHandle>(null);
-  const { openThankYou } = useInquiryModal();
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -122,18 +123,19 @@ export default function InquiryForm({ prefilledPackage }: Props) {
     if (!validate()) return;
     setSubmitting(true);
     try {
-      const res = await fetch("/api/inquiry", {
+      const res = await fetch(INQUIRY_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Bad response");
-      openThankYou({ fullName: form.fullName, phone: form.phone });
-      setForm({ ...initial, packageName: prefilledPackage ?? "" });
-      captchaRef.current?.refresh();
+      const params = new URLSearchParams({
+        name: form.fullName,
+        phone: form.phone,
+      });
+      window.location.href = `/thank-you/?${params.toString()}`;
     } catch {
       setServerError("Something went wrong. Please WhatsApp us directly.");
-    } finally {
       setSubmitting(false);
     }
   }
