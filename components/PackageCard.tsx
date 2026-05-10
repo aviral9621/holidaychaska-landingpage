@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { TourPackage } from "@/lib/packages";
 import { useInquiryModal } from "./ModalProvider";
 import { waPackageUrl } from "@/lib/whatsapp";
-import { WhatsAppIcon } from "./Icons";
+import { WhatsAppIcon, RouteIcon } from "./Icons";
 
 export default function PackageCard({ pkg }: { pkg: TourPackage }) {
   const [open, setOpen] = useState(false);
@@ -53,9 +53,19 @@ export default function PackageCard({ pkg }: { pkg: TourPackage }) {
           </a>
         </div>
 
-        <p className="text-[13px] text-[var(--color-gold)] font-medium mb-3">
-          {pkg.places.join(" · ")}
-        </p>
+        <div className="mb-3">
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className="text-[var(--color-gold)] flex-shrink-0">
+              <RouteIcon width={14} height={14} />
+            </span>
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[var(--color-navy)]">
+              Package Starting :
+            </span>
+          </div>
+          <p className="text-[13px] text-[var(--color-gold)] font-medium pl-[22px] leading-snug">
+            {pkg.places.join(" · ")}
+          </p>
+        </div>
         <ul className="grid grid-cols-2 gap-x-3 gap-y-1.5 mb-4">
           {pkg.amenities.map((a) => (
             <li key={a.label} className="text-[12px] text-[#5B6677] flex items-center gap-1.5">

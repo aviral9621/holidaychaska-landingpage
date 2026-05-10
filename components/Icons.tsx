@@ -84,6 +84,14 @@ export const BriefcaseIcon = (props: Props) => (
   </svg>
 );
 
+export const RouteIcon = (props: Props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <circle cx="6" cy="19" r="2.2" />
+    <circle cx="18" cy="5" r="2.2" />
+    <path d="M8.2 19h6.3a3.5 3.5 0 0 0 0-7H9.5a3.5 3.5 0 0 1 0-7h6.3" />
+  </svg>
+);
+
 export const LocationIcon = (props: Props) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
