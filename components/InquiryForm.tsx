@@ -5,6 +5,7 @@ import CustomSelect, { SelectOption } from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 import { PACKAGES } from "@/lib/packages";
 import { waUrl } from "@/lib/whatsapp";
+import { useInquiryModal } from "./ModalProvider";
 import { WhatsAppIcon, CheckIcon, ArrowRight, ShieldCheck } from "./Icons";
 
 type Props = {
@@ -66,9 +67,9 @@ export default function InquiryForm({ prefilledPackage }: Props) {
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const captchaRef = useRef<CaptchaHandle>(null);
+  const { openThankYou } = useInquiryModal();
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -127,37 +128,14 @@ export default function InquiryForm({ prefilledPackage }: Props) {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Bad response");
-      setSuccess(true);
+      openThankYou({ fullName: form.fullName, phone: form.phone });
+      setForm({ ...initial, packageName: prefilledPackage ?? "" });
+      captchaRef.current?.refresh();
     } catch {
       setServerError("Something went wrong. Please WhatsApp us directly.");
     } finally {
       setSubmitting(false);
     }
-  }
-
-  if (success) {
-    return (
-      <div className="text-center py-8 px-4">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-gold)]/15 border-2 border-[var(--color-gold)] flex items-center justify-center text-[var(--color-gold)]">
-          <CheckIcon width={32} height={32} />
-        </div>
-        <h3 className="text-white text-2xl font-[family-name:var(--font-playfair)] font-bold mb-2">
-          Thank you, {form.fullName}!
-        </h3>
-        <p className="text-white/85 mb-1">Your inquiry has been received.</p>
-        <p className="text-white/70 text-sm mb-6">
-          Our travel expert will call you at <strong className="text-white">{form.phone}</strong> within 2 hours.
-        </p>
-        <a
-          href={waUrl(`Hi! I just submitted an inquiry. Name: ${form.fullName}, Phone: ${form.phone}`)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-wa inline-flex"
-        >
-          <WhatsAppIcon width={18} height={18} /> WhatsApp Us for Faster Reply
-        </a>
-      </div>
-    );
   }
 
   return (
