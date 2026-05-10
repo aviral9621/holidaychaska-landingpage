@@ -68,7 +68,7 @@ export default function Header() {
                        absolute left-1/2 -translate-x-1/2"
           >
             <Image
-              src="/logo.png"
+              src="/new logo.png"
               alt="Gujarat Tour Packages — A Holiday Chaska Company"
               width={320}
               height={84}
@@ -159,7 +159,7 @@ export default function Header() {
               ✕
             </button>
             <Image
-              src="/logo.png"
+              src="/new logo.png"
               alt="Gujarat Tour Packages"
               width={260}
               height={64}

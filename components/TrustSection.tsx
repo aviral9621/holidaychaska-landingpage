@@ -11,7 +11,7 @@ const STATS = [
 const BADGES = [
   { Icon: ShieldCheck, title: "100% Secure & Safe", copy: "All bookings are fully secure with no data sharing." },
   { Icon: RibbonIcon,  title: "No Hidden Charges",  copy: "Transparent pricing — what you see is what you pay." },
-  { Icon: LaurelWreath,title: "Best Price Guarantee", copy: "We match any lower price — guaranteed." },
+  { Icon: LaurelWreath,title: "Tailored Itineraries", copy: "Custom-crafted journeys designed around your preferences." },
 ];
 
 export default function TrustSection() {

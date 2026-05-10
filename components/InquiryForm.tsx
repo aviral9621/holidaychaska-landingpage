@@ -265,7 +265,7 @@ export default function InquiryForm({ prefilledPackage }: Props) {
       <div className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-white/75 pt-1">
         <span className="inline-flex items-center gap-1.5"><CheckIcon width={12} height={12} className="text-[var(--color-gold)]" /> 100% Secure</span>
         <span className="inline-flex items-center gap-1.5"><CheckIcon width={12} height={12} className="text-[var(--color-gold)]" /> No Hidden Charges</span>
-        <span className="inline-flex items-center gap-1.5"><CheckIcon width={12} height={12} className="text-[var(--color-gold)]" /> Best Price Guarantee</span>
+        <span className="inline-flex items-center gap-1.5"><CheckIcon width={12} height={12} className="text-[var(--color-gold)]" /> Tailored Itineraries</span>
       </div>
 
       {serverError && (

@@ -36,7 +36,7 @@ export default function InquirySection() {
             {[
               "100% Secure & Safe",
               "No Hidden Charges",
-              "Best Price Guarantee",
+              "Tailored Itineraries",
               "Reply within 2 hours",
             ].map((t) => (
               <li key={t} className="flex items-center gap-2.5">

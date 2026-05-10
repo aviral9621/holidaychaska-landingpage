@@ -16,7 +16,7 @@ const STATS = [
   { Icon: GroupIcon,    num: "50,000+",   label: "Happy\nTravelers" },
   { Icon: HeadsetIcon,  num: "24/7",      label: "Support\nAvailable" },
   { Icon: ShieldCheck,  num: "100%",      label: "Safe & Secure\nTravel" },
-  { Icon: RibbonIcon,   num: "Best Price",label: "Guarantee", isPrice: true },
+  { Icon: RibbonIcon,   num: "Tailored",  label: "Itineraries", isPrice: true },
 ];
 
 export default function Hero() {

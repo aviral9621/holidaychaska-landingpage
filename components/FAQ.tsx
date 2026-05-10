@@ -24,9 +24,9 @@ const BENEFITS = [
   },
   {
     Icon: RibbonIcon,
-    title: "Best Price Guarantee",
-    desc: "We ensure the best value for your travel investment.",
-    descShort: "Best Value for Your Travel",
+    title: "Tailored Itineraries",
+    desc: "Custom-crafted journeys designed around your preferences.",
+    descShort: "Custom-Crafted for You",
   },
   {
     Icon: HeadsetIcon,

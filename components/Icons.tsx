@@ -84,6 +84,22 @@ export const BriefcaseIcon = (props: Props) => (
   </svg>
 );
 
+export const LocationIcon = (props: Props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+);
+
+export const ReceiptIcon = (props: Props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+    <path d="M4 2h16v20l-3-2-3 2-3-2-3 2-3-2-1 2z" transform="translate(0 0)"/>
+    <line x1="8" y1="8" x2="16" y2="8"/>
+    <line x1="8" y1="12" x2="16" y2="12"/>
+    <line x1="8" y1="16" x2="13" y2="16"/>
+  </svg>
+);
+
 export const MailIcon = (props: Props) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
     <rect x="3" y="5" width="18" height="14" rx="2" />

@@ -12,6 +12,8 @@ import {
   LaurelWreath,
   GroupIcon,
   HeadsetIcon,
+  LocationIcon,
+  ReceiptIcon,
 } from "./Icons";
 
 const QUICK_LINKS: [string, string][] = [
@@ -107,7 +109,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-4">
             <Image
-              src="/logo.png"
+              src="/new logo.png"
               alt="Gujarat Tour Packages — A Holiday Chaska Company"
               width={320}
               height={84}
@@ -215,6 +217,59 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+            {/* Office Addresses */}
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start gap-3">
+                <span className="w-9 h-9 rounded-full bg-[rgba(201,146,42,0.1)] border border-[rgba(201,146,42,0.3)] flex items-center justify-center text-[var(--color-gold)] flex-shrink-0">
+                  <LocationIcon width={15} height={15} />
+                </span>
+                <div className="text-[13px] leading-snug pt-1">
+                  <div className="text-[var(--color-gold)] font-semibold uppercase tracking-wider text-[11px] mb-1">
+                    Head Office
+                  </div>
+                  <p className="text-white/80">
+                    Manral Business Center, Raja Rani Vihar,
+                    <br />
+                    Near Birla School, Haldwani,
+                    <br />
+                    Dist – Nainital, Uttarakhand
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-9 h-9 rounded-full bg-[rgba(201,146,42,0.1)] border border-[rgba(201,146,42,0.3)] flex items-center justify-center text-[var(--color-gold)] flex-shrink-0">
+                  <LocationIcon width={15} height={15} />
+                </span>
+                <div className="text-[13px] leading-snug pt-1">
+                  <div className="text-[var(--color-gold)] font-semibold uppercase tracking-wider text-[11px] mb-1">
+                    Gujarat Travel Desk
+                  </div>
+                  <p className="text-white/80">
+                    409, Titanium City Centre Mall,
+                    <br />
+                    Satellite, Ahmedabad,
+                    <br />
+                    Gujarat – 380015
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-9 h-9 rounded-full bg-[rgba(201,146,42,0.1)] border border-[rgba(201,146,42,0.3)] flex items-center justify-center text-[var(--color-gold)] flex-shrink-0">
+                  <ReceiptIcon width={15} height={15} />
+                </span>
+                <div className="text-[13px] leading-snug pt-1">
+                  <div className="text-[var(--color-gold)] font-semibold uppercase tracking-wider text-[11px] mb-1">
+                    GSTIN
+                  </div>
+                  <p className="text-white/80 font-mono tracking-wide">
+                    07DQLPK2911Q1ZB
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <a
               href={waUrl()}
