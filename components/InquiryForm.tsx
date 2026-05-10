@@ -121,7 +121,7 @@ export default function InquiryForm({ prefilledPackage }: Props) {
     if (!validate()) return;
     setSubmitting(true);
     try {
-      const res = await fetch("/api/inquiry", {
+      const res = await fetch("/submit.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
