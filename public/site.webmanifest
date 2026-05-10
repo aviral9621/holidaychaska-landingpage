@@ -1,0 +1,14 @@
+{
+  "name": "Gujarat Tour Packages — Holiday Chaska",
+  "short_name": "Gujarat Tours",
+  "description": "Book the best Gujarat tour packages — pilgrimage, heritage, wildlife and family tours by Holiday Chaska.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1B3E",
+  "theme_color": "#0D1B3E",
+  "icons": [
+    { "src": "/site-icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/site-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/site-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

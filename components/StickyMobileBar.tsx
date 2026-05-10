@@ -23,19 +23,14 @@ export default function StickyMobileBar() {
 
   return (
     <>
-      {/* Floating Call pill — mobile only, just above the bar */}
+      {/* Floating Call FAB — mobile only, just above the bar */}
       <a
         href={`tel:${PHONE_TEL}`}
-        aria-label="Call us to know more"
-        className="sticky-call-pill lg:hidden"
+        aria-label="Call us"
+        title="Call us"
+        className="sticky-call-fab lg:hidden"
       >
-        <span className="sticky-call-icon">
-          <PhoneIcon width={16} height={16} />
-        </span>
-        <span className="sticky-call-text">
-          <span className="sticky-call-label">Call us to know more</span>
-          <span className="sticky-call-sub">Tap to dial now</span>
-        </span>
+        <PhoneIcon width={20} height={20} />
       </a>
 
       <div className="fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 lg:hidden h-14 shadow-[0_-4px_12px_rgba(0,0,0,0.25)]">

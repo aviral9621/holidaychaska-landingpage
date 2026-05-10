@@ -536,61 +536,33 @@ body {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* === Sticky mobile Call pill (mobile only, above the bottom bar) === */
-.sticky-call-pill {
+/* === Sticky mobile Call FAB (mobile only, above the bottom bar) === */
+.sticky-call-fab {
   position: fixed;
-  right: 12px;
+  right: 14px;
   bottom: calc(56px + 14px + env(safe-area-inset-bottom, 0px));
   z-index: 91;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px 9px 9px;
-  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
-  color: #0a1638;
-  border-radius: 999px;
-  box-shadow: 0 8px 22px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.15) inset;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  animation: stickyCallPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both,
-             stickyCallPulse 2.4s ease-in-out 2s infinite;
-}
-.sticky-call-pill:active { transform: scale(0.97); }
-.sticky-call-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: #0a1638;
-  color: var(--color-gold);
+  width: 48px;
+  height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+  color: #0a1638;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.18) inset;
+  text-decoration: none;
+  animation: stickyCallPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both,
+             stickyCallPulse 2.4s ease-in-out 2s infinite;
 }
-.sticky-call-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-.sticky-call-label {
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.sticky-call-sub {
-  font-size: 10.5px;
-  font-weight: 500;
-  opacity: 0.75;
-  letter-spacing: 0.04em;
-}
+.sticky-call-fab:active { transform: scale(0.94); }
 @keyframes stickyCallPop {
   from { opacity: 0; transform: translateY(20px) scale(0.85); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes stickyCallPulse {
-  0%, 100% { box-shadow: 0 8px 22px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.15) inset, 0 0 0 0 rgba(201,146,42,0.55); }
-  50%      { box-shadow: 0 8px 22px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.15) inset, 0 0 0 10px rgba(201,146,42,0); }
+  0%, 100% { box-shadow: 0 8px 20px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.18) inset, 0 0 0 0 rgba(201,146,42,0.55); }
+  50%      { box-shadow: 0 8px 20px rgba(13,27,62,0.35), 0 0 0 1px rgba(255,255,255,0.18) inset, 0 0 0 10px rgba(201,146,42,0); }
 }
 
 /* Reserve space at bottom of page on mobile so footer isn't hidden by sticky bar */
