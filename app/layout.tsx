@@ -26,7 +26,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const SITE_URL = "https://holidaychaska.com";
+const SITE_URL = "https://gujarattours.online";
 const SITE_TITLE =
   "Gujarat Tour Packages | Pilgrimage, Heritage & Wildlife Tours | Holiday Chaska";
 const SITE_DESCRIPTION =
