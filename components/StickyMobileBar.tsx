@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useInquiryModal } from "./ModalProvider";
 import { waUrl, PHONE_TEL } from "@/lib/whatsapp";
-import { WhatsAppIcon, PhoneIcon } from "./Icons";
+import { WhatsAppIcon } from "./Icons";
 
 export default function StickyMobileBar() {
   const { open: modalOpen, openModal } = useInquiryModal();
@@ -30,7 +30,15 @@ export default function StickyMobileBar() {
         title="Call us"
         className="sticky-call-fab lg:hidden"
       >
-        <PhoneIcon width={20} height={20} />
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="#ffffff"
+          aria-hidden
+        >
+          <path d="M20.49 15.51l-2.93-1.27a1.4 1.4 0 0 0-1.55.28l-1.18 1.19a11.2 11.2 0 0 1-4.54-4.54l1.19-1.18a1.4 1.4 0 0 0 .28-1.55L10.49 5.51a1.4 1.4 0 0 0-1.5-.84L5.7 5.27a1.4 1.4 0 0 0-1.13 1.46c.34 8.16 6.84 14.66 15 15a1.4 1.4 0 0 0 1.46-1.13l.6-3.29a1.4 1.4 0 0 0-.84-1.5z" />
+        </svg>
       </a>
 
       <div className="fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 lg:hidden h-14 shadow-[0_-4px_12px_rgba(0,0,0,0.25)]">
