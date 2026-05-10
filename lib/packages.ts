@@ -30,7 +30,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "Explore Gujarat's iconic spiritual and scenic destinations — Dwarka's sacred ghats, Somnath's Jyotirlinga temple, and Ahmedabad's heritage gems in a perfectly paced 6-day journey.",
-    image: "/packages/package-1-dwarka-somnath.jpg",
+    image: "/packages/delightful-gujarat.webp",
   },
   {
     id: "majestic-gujarat",
@@ -48,7 +48,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "A week-long royal journey through Gujarat's majestic temples, coastline shrines, and vibrant heritage cities. Perfect for families seeking comfort and cultural enrichment.",
-    image: "/packages/package-2-majestic-gujarat.jpg",
+    image: "/packages/majestic-gujarat.webp",
   },
   {
     id: "gujarat-family-tour",
@@ -66,7 +66,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "An 8-day family-friendly package covering all of Gujarat's must-visit destinations with comfortable hotels, guided sightseeing, and wholesome vegetarian meals throughout.",
-    image: "/packages/package-3-family-tour.jpg",
+    image: "/packages/gujarat-family-tour.webp",
   },
   {
     id: "gujarat-temple-tour",
@@ -84,7 +84,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "A deeply spiritual 8-day pilgrimage through Gujarat's most revered temples — Somnath Jyotirlinga, Dwarkadheesh, Nageshwar, Ambaji, and Akshardham. Designed for devotees seeking blessings and peace.",
-    image: "/packages/package-4-temple-tour.jpg",
+    image: "/packages/gujarat-temple-tour.webp",
   },
   {
     id: "gujarat-extravaganza",
@@ -102,7 +102,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "The ultimate Gujarat experience — 9 days covering spiritual heartland, cultural capitals, coastal gems, and the mystical desert landscapes of Kutch. Best for comprehensive group tours.",
-    image: "/packages/package-5-extravaganza.jpg",
+    image: "/packages/gujarat-extravaganza.webp",
   },
   {
     id: "rann-of-kutch",
@@ -120,7 +120,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "Experience the magic of the Great Rann — the world's largest salt desert. Enjoy stunning moonlit white desert nights, Kutchi folk music, local handicraft bazaars, and vibrant cultural performances.",
-    image: "/packages/package-6-rann-kutch.jpg",
+    image: "/packages/rann-of-kutch.webp",
   },
   {
     id: "gir-wildlife-safari",
@@ -138,7 +138,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "India's only Asiatic Lions roam the forests of Gir. Combine thrilling jeep safari rides through Gir National Park with a visit to Somnath's sacred shores and the sunny beaches of Diu Island.",
-    image: "/packages/package-7-gir-wildlife.jpg",
+    image: "/packages/gir-wildlife-safari.webp",
   },
   {
     id: "bhuj-kutch-heritage",
@@ -156,7 +156,7 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "Discover the rich heritage of Bhuj and Kutch — ancient palaces, intricate Ajrakh embroidery, Aina Mahal Museum, and the extraordinary artisan villages that make Kutch a living cultural treasure.",
-    image: "/packages/package-8-bhuj-heritage.jpg",
+    image: "/packages/bhuj-kutch-heritage.webp",
   },
   {
     id: "saurashtra-diu",
@@ -174,6 +174,6 @@ export const PACKAGES: TourPackage[] = [
     ],
     description:
       "Explore royal Saurashtra — Dwarkadheesh temple, Somnath Jyotirlinga, Gir Lion Reserve, and finally unwind on the sun-kissed Portuguese-heritage beaches of Diu Island.",
-    image: "/packages/package-9-saurashtra-diu.jpg",
+    image: "/packages/saurashtra-diu.webp",
   },
 ];
