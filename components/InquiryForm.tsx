@@ -1,6 +1,8 @@
 "use client";
 import { useRef, useState, FormEvent } from "react";
 import CaptchaCanvas, { CaptchaHandle } from "./CaptchaCanvas";
+import CustomSelect, { SelectOption } from "./CustomSelect";
+import CustomDatePicker from "./CustomDatePicker";
 import { PACKAGES } from "@/lib/packages";
 import { waUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon, CheckIcon, ArrowRight, ShieldCheck } from "./Icons";
@@ -33,15 +35,35 @@ const initial: FormState = {
   captcha: "",
 };
 
-const FieldLabel = ({ children, required }: { children: React.ReactNode; required?: boolean }) => (
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const FieldLabel = ({
+  children,
+  required,
+}: {
+  children: React.ReactNode;
+  required?: boolean;
+}) => (
   <label className="block text-[12px] font-semibold uppercase tracking-[0.08em] text-white/75 mb-1.5">
     {children}
     {required && <span className="text-[var(--color-gold)] ml-0.5">*</span>}
   </label>
 );
 
+const PACKAGE_OPTIONS: SelectOption[] = [
+  ...PACKAGES.map((p) => ({ value: p.name, label: p.name, hint: p.duration })),
+  {
+    value: "Want a Customized Package",
+    label: "Want a Customized Package",
+    hint: "Tell us your preferences and we'll craft it",
+  },
+];
+
 export default function InquiryForm({ prefilledPackage }: Props) {
-  const [form, setForm] = useState<FormState>({ ...initial, packageName: prefilledPackage ?? "" });
+  const [form, setForm] = useState<FormState>({
+    ...initial,
+    packageName: prefilledPackage ?? "",
+  });
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -55,11 +77,30 @@ export default function InquiryForm({ prefilledPackage }: Props) {
     if (errors[key]) setErrors((e) => ({ ...e, [key]: undefined }));
   }
 
+  function setPhone(raw: string) {
+    const digits = raw.replace(/\D/g, "").slice(0, 10);
+    set("phone", digits);
+  }
+
+  function validateEmail(value: string): string | undefined {
+    const v = value.trim();
+    if (!v) return "Enter your email address";
+    if (!EMAIL_RE.test(v)) return "Enter a valid email address (e.g. you@example.com)";
+    return undefined;
+  }
+
+  function validatePhone(value: string): string | undefined {
+    if (!/^\d{10}$/.test(value)) return "Enter a valid 10-digit mobile number";
+    return undefined;
+  }
+
   function validate(): boolean {
     const e: Partial<Record<keyof FormState, string>> = {};
     if (form.fullName.trim().length < 2) e.fullName = "Please enter your full name";
-    if (!/^\d{10}$/.test(form.phone.replace(/\D/g, ""))) e.phone = "Enter a 10-digit phone number";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter a valid email";
+    const phErr = validatePhone(form.phone);
+    if (phErr) e.phone = phErr;
+    const emErr = validateEmail(form.email);
+    if (emErr) e.email = emErr;
     if (!form.travelDate) e.travelDate = "Pick a travel date";
     if (!form.packageName) e.packageName = "Select a package";
     const t = parseInt(form.travelers || "0", 10);
@@ -140,8 +181,17 @@ export default function InquiryForm({ prefilledPackage }: Props) {
             placeholder="10-digit mobile"
             type="tel"
             inputMode="numeric"
+            autoComplete="tel"
+            maxLength={10}
+            pattern="\d{10}"
             value={form.phone}
-            onChange={(e) => set("phone", e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
+            onBlur={() => {
+              if (form.phone) {
+                const err = validatePhone(form.phone);
+                if (err) setErrors((s) => ({ ...s, phone: err }));
+              }
+            }}
             required
           />
           {errors.phone && <span className="field-error">{errors.phone}</span>}
@@ -152,30 +202,28 @@ export default function InquiryForm({ prefilledPackage }: Props) {
             className={`form-input ${errors.email ? "error" : ""}`}
             placeholder="you@example.com"
             type="email"
+            autoComplete="email"
+            inputMode="email"
             value={form.email}
             onChange={(e) => set("email", e.target.value)}
+            onBlur={() => {
+              if (form.email) {
+                const err = validateEmail(form.email);
+                if (err) setErrors((s) => ({ ...s, email: err }));
+              }
+            }}
             required
           />
           {errors.email && <span className="field-error">{errors.email}</span>}
         </div>
         <div>
           <FieldLabel required>Travel Date</FieldLabel>
-          <div className="form-date-wrap">
-            <input
-              className={`form-input form-date ${errors.travelDate ? "error" : ""}`}
-              type="date"
-              min={today}
-              value={form.travelDate}
-              onChange={(e) => set("travelDate", e.target.value)}
-              required
-            />
-            <svg className="form-date-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <rect x="3" y="4" width="18" height="18" rx="2" />
-              <line x1="16" y1="2" x2="16" y2="6" />
-              <line x1="8" y1="2" x2="8" y2="6" />
-              <line x1="3" y1="10" x2="21" y2="10" />
-            </svg>
-          </div>
+          <CustomDatePicker
+            value={form.travelDate}
+            onChange={(v) => set("travelDate", v)}
+            min={today}
+            error={!!errors.travelDate}
+          />
           {errors.travelDate && <span className="field-error">{errors.travelDate}</span>}
         </div>
         <div>
@@ -207,25 +255,14 @@ export default function InquiryForm({ prefilledPackage }: Props) {
 
       <div>
         <FieldLabel required>Select Package</FieldLabel>
-        <div className="form-select-wrap">
-          <select
-            className={`form-input form-select ${errors.packageName ? "error" : ""}`}
-            value={form.packageName}
-            onChange={(e) => set("packageName", e.target.value)}
-            required
-          >
-            <option value="" style={{ color: "#000" }}>— Choose a package —</option>
-            {PACKAGES.map((p) => (
-              <option key={p.id} value={p.name} style={{ color: "#000" }}>
-                {p.name}
-              </option>
-            ))}
-            <option value="Not decided yet" style={{ color: "#000" }}>Not decided yet</option>
-          </select>
-          <svg className="form-select-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
+        <CustomSelect
+          value={form.packageName}
+          onChange={(v) => set("packageName", v)}
+          options={PACKAGE_OPTIONS}
+          placeholder="— Choose a package —"
+          error={!!errors.packageName}
+          ariaLabel="Select tour package"
+        />
         {errors.packageName && <span className="field-error">{errors.packageName}</span>}
       </div>
 
@@ -245,17 +282,19 @@ export default function InquiryForm({ prefilledPackage }: Props) {
           <ShieldCheck width={14} height={14} className="text-[var(--color-gold)]" />
           Verify you&apos;re human
         </div>
-        <div className="flex items-center justify-between gap-3 mb-3">
+        <div className="flex flex-col sm:flex-row sm:items-stretch gap-3">
           <CaptchaCanvas ref={captchaRef} />
+          <div className="flex-1 min-w-0">
+            <input
+              className={`form-input h-full ${errors.captcha ? "error" : ""}`}
+              placeholder="Type the characters you see"
+              autoComplete="off"
+              value={form.captcha}
+              onChange={(e) => set("captcha", e.target.value)}
+              required
+            />
+          </div>
         </div>
-        <input
-          className={`form-input ${errors.captcha ? "error" : ""}`}
-          placeholder="Type the characters you see above"
-          autoComplete="off"
-          value={form.captcha}
-          onChange={(e) => set("captcha", e.target.value)}
-          required
-        />
         {errors.captcha && <span className="field-error">{errors.captcha}</span>}
         <p className="text-[11px] text-white/55 mt-2">
           Case-insensitive. Click the refresh icon for a new code.

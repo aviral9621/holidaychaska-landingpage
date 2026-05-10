@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useInquiryModal } from "./ModalProvider";
-import { waUrl } from "@/lib/whatsapp";
-import { WhatsAppIcon } from "./Icons";
+import { waUrl, PHONE_TEL } from "@/lib/whatsapp";
+import { WhatsAppIcon, PhoneIcon } from "./Icons";
 
 export default function StickyMobileBar() {
   const { open: modalOpen, openModal } = useInquiryModal();
@@ -22,22 +22,39 @@ export default function StickyMobileBar() {
   if (modalOpen || hideForInquiry) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 lg:hidden h-14 shadow-[0_-4px_12px_rgba(0,0,0,0.25)]">
-      <button
-        type="button"
-        onClick={() => openModal()}
-        className="bg-[var(--color-gold)] text-white font-semibold uppercase text-sm tracking-wider flex items-center justify-center gap-1"
-      >
-        Enquiry Now
-      </button>
+    <>
+      {/* Floating Call pill — mobile only, just above the bar */}
       <a
-        href={waUrl()}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[var(--color-green-wa)] text-white font-semibold uppercase text-sm tracking-wider flex items-center justify-center gap-2"
+        href={`tel:${PHONE_TEL}`}
+        aria-label="Call us to know more"
+        className="sticky-call-pill lg:hidden"
       >
-        <WhatsAppIcon width={18} height={18} /> WhatsApp
+        <span className="sticky-call-icon">
+          <PhoneIcon width={16} height={16} />
+        </span>
+        <span className="sticky-call-text">
+          <span className="sticky-call-label">Call us to know more</span>
+          <span className="sticky-call-sub">Tap to dial now</span>
+        </span>
       </a>
-    </div>
+
+      <div className="fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 lg:hidden h-14 shadow-[0_-4px_12px_rgba(0,0,0,0.25)]">
+        <button
+          type="button"
+          onClick={() => openModal()}
+          className="bg-[var(--color-gold)] text-white font-semibold uppercase text-sm tracking-wider flex items-center justify-center gap-1"
+        >
+          Enquiry Now
+        </button>
+        <a
+          href={waUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[var(--color-green-wa)] text-white font-semibold uppercase text-sm tracking-wider flex items-center justify-center gap-2"
+        >
+          <WhatsAppIcon width={18} height={18} /> WhatsApp
+        </a>
+      </div>
+    </>
   );
 }
