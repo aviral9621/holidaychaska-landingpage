@@ -8,7 +8,7 @@ export default function InquirySection() {
       className="py-20 md:py-24 relative overflow-hidden"
       style={{
         background:
-          "radial-gradient(circle at 20% 0%, #1a2a55 0%, var(--color-navy) 50%, #060e20 100%)",
+          "radial-gradient(circle at 20% 0%, #1a3a25 0%, var(--color-navy) 50%, #060f0a 100%)",
       }}
     >
       {/* Subtle gold ornamental texture */}
@@ -22,21 +22,21 @@ export default function InquirySection() {
       />
       <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5">
-          <div className="prehad mb-3">PLAN YOUR GUJARAT TRIP</div>
+          <div className="prehad mb-3">PLAN YOUR UTTARAKHAND TRIP</div>
           <h2 className="h2-section text-white mb-4">
             Get a Custom Tour Quote
             <br />
             in Just 2 Minutes
           </h2>
           <p className="text-white/75 text-base mb-7 max-w-md leading-relaxed">
-            Fill the form and our travel expert will connect with you shortly. No
-            obligations, no hidden charges — just an honest, tailored plan for your trip.
+            Fill the form and our Uttarakhand travel expert will connect with you shortly. No
+            obligations, no hidden charges — just an honest, tailored plan for your Himalayan adventure.
           </p>
           <ul className="space-y-3 text-white/90 text-[14px]">
             {[
               "100% Secure & Safe",
               "No Hidden Charges",
-              "Tailored Itineraries",
+              "Tailored Himalayan Itineraries",
               "Reply within 2 hours",
             ].map((t) => (
               <li key={t} className="flex items-center gap-2.5">
@@ -56,7 +56,7 @@ export default function InquirySection() {
           className="lg:col-span-7 rounded-2xl border border-[rgba(201,146,42,0.3)] p-6 sm:p-8"
           style={{
             background:
-              "linear-gradient(180deg, rgba(13,27,62,0.85) 0%, rgba(8,18,46,0.95) 100%)",
+              "linear-gradient(180deg, rgba(11,34,24,0.85) 0%, rgba(6,15,10,0.95) 100%)",
             backdropFilter: "blur(8px)",
             boxShadow: "0 16px 48px rgba(0,0,0,0.35)",
           }}

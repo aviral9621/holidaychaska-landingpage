@@ -26,33 +26,34 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const SITE_URL = "https://gujarattours.online";
+const SITE_URL = "https://uttarakhandtrippackages.in";
 const SITE_TITLE =
-  "Gujarat Tour Packages | Pilgrimage, Heritage & Wildlife Tours | Holiday Chaska";
+  "Uttarakhand Tour Packages | Nainital, Mussoorie, Auli & Char Dham Tours | Holiday Chaska";
 const SITE_DESCRIPTION =
-  "Book the best Gujarat tour packages — Dwarka Somnath, Rann of Kutch, Statue of Unity, Gir Wildlife Safari, Bhuj Heritage & more. Customized itineraries with hotels, sightseeing & AC transfers by Holiday Chaska. Get a free quote in 2 hours.";
+  "Book the best Uttarakhand tour packages — Nainital, Mussoorie, Auli Skiing, Jim Corbett Safari, Char Dham Yatra, Rishikesh Rafting & Honeymoon Packages. Customized itineraries with hotels, sightseeing & AC transfers by Holiday Chaska. Get a free quote in 2 hours.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | Gujarat Tour Packages by Holiday Chaska",
+    template: "%s | Uttarakhand Tour Packages by Holiday Chaska",
   },
   description: SITE_DESCRIPTION,
-  applicationName: "Gujarat Tour Packages",
+  applicationName: "Uttarakhand Tour Packages",
   keywords: [
-    "Gujarat tour packages",
-    "Gujarat tourism",
-    "Dwarka Somnath tour",
-    "Rann of Kutch tour",
-    "Statue of Unity tour",
-    "Gir Wildlife Safari",
-    "Bhuj Kutch heritage tour",
-    "Saurashtra Diu tour",
-    "Gujarat family holiday",
-    "Gujarat pilgrimage tour",
+    "Uttarakhand tour packages",
+    "Uttarakhand tourism",
+    "Nainital tour package",
+    "Mussoorie tour package",
+    "Auli skiing tour",
+    "Jim Corbett safari package",
+    "Char Dham yatra package",
+    "Rishikesh tour package",
+    "Uttarakhand honeymoon package",
+    "Uttarakhand family holiday",
+    "Hill station tour packages",
     "Holiday Chaska",
-    "Gujarat travel agency",
+    "Uttarakhand travel agency",
   ],
   authors: [{ name: "Holiday Chaska" }],
   creator: "Holiday Chaska",
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: SITE_URL,
-    siteName: "Gujarat Tour Packages",
+    siteName: "Uttarakhand Tour Packages",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [
@@ -83,7 +84,7 @@ export const metadata: Metadata = {
         url: "/hero-desktop.jpg",
         width: 1200,
         height: 630,
-        alt: "Gujarat Tour Packages — Statue of Unity, Temples, Heritage & Wildlife",
+        alt: "Uttarakhand Tour Packages — Nainital, Mussoorie, Auli & Himalayan Adventures",
         type: "image/jpeg",
       },
     ],
@@ -123,7 +124,7 @@ export default function RootLayout({
     >
       <head>
         <link rel="preload" as="image" href="/hero-desktop.jpg" />
-        <meta name="theme-color" content="#0D1B3E" />
+        <meta name="theme-color" content="#0B2218" />
         <meta name="format-detection" content="telephone=yes" />
         <script
           type="application/ld+json"
@@ -131,7 +132,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "TravelAgency",
-              name: "Gujarat Tour Packages — Holiday Chaska",
+              name: "Uttarakhand Tour Packages — Holiday Chaska",
               alternateName: "Holiday Chaska",
               url: SITE_URL,
               logo: `${SITE_URL}/new logo.png`,
@@ -140,7 +141,7 @@ export default function RootLayout({
               telephone: "+91-9717580259",
               email: "enquiry@holidaychaska.com",
               priceRange: "₹₹",
-              areaServed: { "@type": "AdministrativeArea", name: "Gujarat, India" },
+              areaServed: { "@type": "AdministrativeArea", name: "Uttarakhand, India" },
               address: [
                 {
                   "@type": "PostalAddress",
@@ -148,14 +149,6 @@ export default function RootLayout({
                     "Manral Business Center, Raja Rani Vihar, Near Birla School",
                   addressLocality: "Haldwani",
                   addressRegion: "Uttarakhand",
-                  addressCountry: "IN",
-                },
-                {
-                  "@type": "PostalAddress",
-                  streetAddress: "409, Titanium City Centre Mall, Satellite",
-                  addressLocality: "Ahmedabad",
-                  addressRegion: "Gujarat",
-                  postalCode: "380015",
                   addressCountry: "IN",
                 },
               ],

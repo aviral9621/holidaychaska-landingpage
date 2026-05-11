@@ -11,7 +11,7 @@ const STATS = [
 const BADGES = [
   { Icon: ShieldCheck, title: "100% Secure & Safe", copy: "All bookings are fully secure with no data sharing." },
   { Icon: RibbonIcon,  title: "No Hidden Charges",  copy: "Transparent pricing — what you see is what you pay." },
-  { Icon: LaurelWreath,title: "Tailored Itineraries", copy: "Custom-crafted journeys designed around your preferences." },
+  { Icon: LaurelWreath,title: "Tailored Itineraries", copy: "Custom-crafted Himalayan journeys designed around your preferences." },
 ];
 
 export default function TrustSection() {
@@ -21,7 +21,7 @@ export default function TrustSection() {
       className="py-16 md:py-20 relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #FAF3E0 0%, #F5EBD0 100%)",
+          "linear-gradient(180deg, #EEF5E6 0%, #E6F0DC 100%)",
       }}
     >
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 relative">
@@ -31,12 +31,12 @@ export default function TrustSection() {
           <div className="gold-divider"><span>❖</span></div>
         </div>
 
-        <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-0 bg-white rounded-2xl p-5 md:p-7 border border-[#E8D9B8] shadow-[0_8px_30px_rgba(13,27,62,0.08)]">
+        <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-0 bg-white rounded-2xl p-5 md:p-7 border border-[#C8DEB8] shadow-[0_8px_30px_rgba(11,34,24,0.08)]">
           {STATS.map(({ Icon, num, label }, i) => (
             <li
               key={label}
               className={`flex flex-col items-center text-center gap-1.5 px-2 ${
-                i < STATS.length - 1 ? "md:border-r md:border-[#E8D9B8]" : ""
+                i < STATS.length - 1 ? "md:border-r md:border-[#C8DEB8]" : ""
               }`}
             >
               <span className="text-[var(--color-gold)] mb-1">
@@ -54,7 +54,7 @@ export default function TrustSection() {
           {BADGES.map(({ Icon, title, copy }) => (
             <div
               key={title}
-              className="bg-white rounded-xl border border-[#E8D9B8] p-5 flex items-start gap-3 shadow-[0_4px_18px_rgba(13,27,62,0.05)]"
+              className="bg-white rounded-xl border border-[#C8DEB8] p-5 flex items-start gap-3 shadow-[0_4px_18px_rgba(11,34,24,0.05)]"
             >
               <span className="text-[var(--color-gold)] flex-shrink-0">
                 <Icon width={28} height={28} />

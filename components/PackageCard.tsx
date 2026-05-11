@@ -59,12 +59,17 @@ export default function PackageCard({ pkg }: { pkg: TourPackage }) {
               <RouteIcon width={14} height={14} />
             </span>
             <span className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[var(--color-navy)]">
-              Package Starting :
+              Places Covered :
             </span>
           </div>
           <p className="text-[13px] text-[var(--color-gold)] font-medium pl-[22px] leading-snug">
             {pkg.places.join(" · ")}
           </p>
+          {"price" in pkg && pkg.price && (
+            <p className="pl-[22px] mt-1 text-[13px] font-bold text-[var(--color-navy)]">
+              Starting from <span className="text-[var(--color-gold)]">{pkg.price as string}</span>
+            </p>
+          )}
         </div>
         <ul className="grid grid-cols-2 gap-x-3 gap-y-1.5 mb-4">
           {pkg.amenities.map((a) => (

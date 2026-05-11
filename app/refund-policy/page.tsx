@@ -1,10 +1,10 @@
 import { LegalShell } from "@/components/LegalShell";
 
-export const metadata = { title: "Refund & Cancellation Policy | Gujarat Tour Packages" };
+export const metadata = { title: "Refund & Cancellation Policy | Uttarakhand Tour Packages" };
 
 export default function Refund() {
   return (
-    <LegalShell title="Refund & Cancellation Policy" subtitle="Gujarat Tour Packages — A Holiday Chaska Company">
+    <LegalShell title="Refund & Cancellation Policy" subtitle="Uttarakhand Tour Packages — A Holiday Chaska Company">
       <h2>1. Booking Confirmation</h2>
       <p>A booking is confirmed only after receipt of advance payment and written confirmation via email or WhatsApp from our team.</p>
 
@@ -23,7 +23,7 @@ export default function Refund() {
       </table>
       <p><em>GST at 5% and payment gateway charges are non-refundable in all cases.</em></p>
 
-      <h2>3. Cancellation by Gujarat Tour Packages</h2>
+      <h2>3. Cancellation by Uttarakhand Tour Packages</h2>
       <p>If we cancel due to natural disaster, government-imposed travel restrictions, force majeure events, or circumstances beyond our control, you will receive either a <strong>full refund</strong> or the option to <strong>reschedule at no extra cost</strong>.</p>
 
       <h2>4. Amendments and Rescheduling</h2>
@@ -36,8 +36,8 @@ export default function Refund() {
       <h2>5. Non-Refundable Items</h2>
       <ul>
         <li>Flight tickets booked on traveler&apos;s behalf (subject to airline policy)</li>
-        <li>Festival event tickets (Rann Utsav, Navratri events)</li>
-        <li>Jungle safari permits (Gir National Park)</li>
+        <li>Festival event tickets (Nanda Devi Mahotsav, etc.)</li>
+        <li>Jungle safari permits (Jim Corbett National Park)</li>
         <li>Visa fees, if applicable</li>
       </ul>
 
@@ -53,7 +53,7 @@ export default function Refund() {
       <p>Include your booking reference number, full name, and travel date. We will acknowledge within 24 hours.</p>
 
       <h2>8. Dispute Resolution</h2>
-      <p>Both parties agree to resolve disputes amicably. Unresolved disputes are subject to jurisdiction in Ahmedabad, Gujarat, India.</p>
+      <p>Both parties agree to resolve disputes amicably. Unresolved disputes are subject to jurisdiction in Haldwani, Uttarakhand, India.</p>
     </LegalShell>
   );
 }

@@ -69,7 +69,7 @@ export default function ThankYouPage() {
       className="min-h-screen relative overflow-hidden"
       style={{
         background:
-          "radial-gradient(circle at 20% 0%, #1a2a55 0%, var(--color-navy) 50%, #060e20 100%)",
+          "radial-gradient(circle at 20% 0%, #1a3a25 0%, var(--color-navy) 50%, #060f0a 100%)",
       }}
     >
       <div
@@ -134,11 +134,11 @@ export default function ThankYouPage() {
               Our travel expert will call you on{" "}
               <strong className="text-white whitespace-nowrap">+91 {phone}</strong>{" "}
               within the next <strong className="text-white">2 hours</strong> to craft
-              your perfect Gujarat itinerary.
+              your perfect Uttarakhand itinerary.
             </p>
           ) : (
             <p className="text-white/70 text-base mb-8 leading-relaxed">
-              Our travel expert will reach out shortly to craft your perfect Gujarat
+              Our travel expert will reach out shortly to craft your perfect Uttarakhand
               itinerary.
             </p>
           )}
@@ -148,7 +148,7 @@ export default function ThankYouPage() {
           className="rounded-2xl border border-[rgba(201,146,42,0.3)] p-6 sm:p-8 mb-8"
           style={{
             background:
-              "linear-gradient(180deg, rgba(13,27,62,0.85) 0%, rgba(8,18,46,0.95) 100%)",
+              "linear-gradient(180deg, rgba(11,34,24,0.85) 0%, rgba(6,15,10,0.95) 100%)",
             backdropFilter: "blur(8px)",
             boxShadow: "0 16px 48px rgba(0,0,0,0.35)",
           }}

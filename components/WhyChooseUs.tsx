@@ -3,12 +3,12 @@ import Image from "next/image";
 import { useInquiryModal } from "./ModalProvider";
 
 const BENEFITS = [
-  { icon: "🗺️", title: "Personalized Tour Packages", desc: "Fully customizable itineraries built around your needs." },
-  { icon: "🧭", title: "Expert Local Guides", desc: "Travel with experienced locals for deeper cultural experiences." },
-  { icon: "🛡️", title: "Best Comfort & Safety", desc: "Quality hotels, safe travel & 24x7 assistance throughout." },
-  { icon: "🏷️", title: "Affordable Pricing", desc: "Best value-for-money with no hidden charges, ever." },
-  { icon: "💬", title: "Quick Response", desc: "Instant support & fast reply on WhatsApp." },
-  { icon: "🏆", title: "Trusted & Reliable", desc: "Hundreds of happy travelers and years of proven experience." },
+  { icon: "🏔️", title: "Handpicked Himalayan Routes", desc: "Carefully curated itineraries covering Uttarakhand's finest hill stations, shrines, and adventure trails." },
+  { icon: "🧭", title: "Expert Local Guides", desc: "Travel with experienced locals for deeper cultural and spiritual experiences across the Himalayas." },
+  { icon: "🛡️", title: "Best Comfort & Safety", desc: "Quality mountain hotels, safe travel on hill roads, and 24x7 assistance throughout your journey." },
+  { icon: "🏷️", title: "Affordable Pricing", desc: "Best value-for-money with no hidden charges, ever. Transparent quotes from the first call." },
+  { icon: "💬", title: "Quick Response", desc: "Instant support & fast reply on WhatsApp — our travel experts respond within 2 hours." },
+  { icon: "🏆", title: "Trusted & Reliable", desc: "10+ years of experience and thousands of happy travelers exploring Uttarakhand with us." },
 ];
 
 export default function WhyChooseUs() {
@@ -16,16 +16,15 @@ export default function WhyChooseUs() {
   return (
     <section id="why-choose-us" className="relative overflow-hidden" style={{ background: "var(--color-navy)" }}>
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        {/* Left: dancers panel */}
+        {/* Left: Uttarakhand image panel */}
         <div className="lg:col-span-5 relative flex justify-center">
           <div
             className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden flex items-end justify-center"
             style={{
-              background:
-                "linear-gradient(180deg, #1A2E50 0%, #0D1B3E 100%)",
+              background: "linear-gradient(180deg, #1A3B28 0%, #0B2218 100%)",
             }}
           >
-            {/* Mandala watermark */}
+            {/* Snowflake/mountain watermark */}
             <svg
               viewBox="0 0 200 200"
               className="absolute inset-0 w-full h-full opacity-[0.08] text-[var(--color-gold)]"
@@ -51,12 +50,11 @@ export default function WhyChooseUs() {
               </g>
             </svg>
             <Image
-              src="/dancers.png"
-              alt="Gujarati Garba dancers in traditional attire"
-              width={520}
-              height={650}
-              className="relative z-10 object-contain w-[95%] h-auto"
-              style={{ marginBottom: -8 }}
+              src="/section-image.jpg"
+              alt="Breathtaking Himalayan snow peaks and valley views in Uttarakhand"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 420px"
               priority={false}
             />
           </div>
@@ -66,7 +64,7 @@ export default function WhyChooseUs() {
         <div className="lg:col-span-7">
           <div className="prehad mb-3">WHY TRAVEL WITH US</div>
           <h2 className="h2-section text-white mb-8">
-            Why Choose Gujarat Tour Packages?
+            Why Choose Uttarakhand Tour Packages?
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
             {BENEFITS.map((b) => (

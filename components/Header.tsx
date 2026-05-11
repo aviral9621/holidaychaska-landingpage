@@ -40,7 +40,7 @@ export default function Header() {
       <header
         className="fixed top-0 left-0 right-0 z-[100] transition-all"
         style={{
-          background: scrolled ? "rgba(8,18,46,0.98)" : "rgba(8,18,46,0.92)",
+          background: scrolled ? "rgba(6,15,10,0.98)" : "rgba(6,15,10,0.92)",
           backdropFilter: "blur(14px)",
           WebkitBackdropFilter: "blur(14px)",
           boxShadow: scrolled
@@ -62,14 +62,14 @@ export default function Header() {
           {/* Logo: left on desktop, absolutely-centered on mobile/tablet */}
           <Link
             href="#home"
-            aria-label="Gujarat Tour Packages — Home"
+            aria-label="Uttarakhand Tour Packages — Home"
             className="flex items-center flex-shrink-0 z-[1]
                        xl:static xl:translate-x-0
                        absolute left-1/2 -translate-x-1/2"
           >
             <Image
               src="/new logo.png"
-              alt="Gujarat Tour Packages — A Holiday Chaska Company"
+              alt="Uttarakhand Tour Packages — A Holiday Chaska Company"
               width={320}
               height={84}
               priority
@@ -140,7 +140,7 @@ export default function Header() {
       {menuOpen && (
         <div
           className="fixed inset-0 z-[150] xl:hidden flex flex-col"
-          style={{ background: "var(--color-navy)" }}
+          style={{ background: "var(--color-navy-dark)" }}
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
@@ -160,7 +160,7 @@ export default function Header() {
             </button>
             <Image
               src="/new logo.png"
-              alt="Gujarat Tour Packages"
+              alt="Uttarakhand Tour Packages"
               width={260}
               height={64}
               style={{ width: "auto", height: 52 }}
