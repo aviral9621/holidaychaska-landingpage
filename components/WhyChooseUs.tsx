@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
           </ul>
           <div className="mt-8">
             <button type="button" className="btn-gold" onClick={() => openModal()}>
-              Enquiry Now →
+              Enquire Now →
             </button>
           </div>
         </div>

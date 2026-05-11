@@ -47,7 +47,7 @@ export default function StickyMobileBar() {
           onClick={() => openModal()}
           className="bg-[var(--color-gold)] text-white font-semibold uppercase text-sm tracking-wider flex items-center justify-center gap-1"
         >
-          Enquiry Now
+          Enquire Now
         </button>
         <a
           href={waUrl()}
