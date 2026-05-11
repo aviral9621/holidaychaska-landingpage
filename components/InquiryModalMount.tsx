@@ -25,7 +25,7 @@ export default function InquiryModalMount() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Plan Your Gujarat Trip Inquiry"
+      aria-label="Plan Your Uttarakhand Trip Inquiry"
       className="fixed inset-0 z-[200] flex items-center justify-center"
       style={{ animation: "overlayFadeIn 0.2s ease" }}
     >
@@ -53,7 +53,7 @@ export default function InquiryModalMount() {
             <div className="flex items-center gap-2 text-[var(--color-gold)] mb-1">
               <span aria-hidden>📍</span>
               <span className="text-xs uppercase tracking-[0.2em] font-[family-name:var(--font-cinzel)] font-medium">
-                Plan Your Gujarat Trip
+                Plan Your Uttarakhand Trip
               </span>
             </div>
             <h3 className="text-white text-2xl sm:text-3xl font-[family-name:var(--font-playfair)] font-bold leading-tight">

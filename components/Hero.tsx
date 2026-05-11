@@ -31,56 +31,51 @@ export default function Hero() {
         minHeight: 600,
       }}
     >
-      {/* Image canvas — sits below the fixed header so the statue is never clipped */}
-      <div
-        className="absolute right-0 left-0 md:left-[40%] -z-0 hero-image-canvas"
-      >
+      {/* Image canvas */}
+      <div className="absolute right-0 left-0 md:left-[40%] -z-0 hero-image-canvas">
         <picture>
           <source media="(max-width: 767px)" srcSet="/hero-mobile.jpg" />
           <img
             src="/hero-desktop.jpg"
-            alt="Gujarat Tour Packages — Temple, Statue of Unity and River at Sunset"
+            alt="Uttarakhand Tour Packages — Nainital Lake, Mussoorie Hills and Himalayan Peaks"
             className="w-full h-full object-cover"
             style={{ objectPosition: "60% 50%" }}
           />
         </picture>
       </div>
 
-      {/* Smooth right→left gradient overlay (deep navy on left, fades to clear on right) */}
+      {/* Smooth right→left gradient overlay */}
       <div
         className="absolute inset-0 -z-0 hidden md:block"
         style={{
           background:
-            "linear-gradient(90deg, var(--color-navy) 0%, var(--color-navy) 32%, rgba(13,27,62,0.95) 44%, rgba(13,27,62,0.7) 55%, rgba(13,27,62,0.35) 70%, rgba(13,27,62,0.08) 85%, rgba(13,27,62,0) 100%)",
+            "linear-gradient(90deg, var(--color-navy) 0%, var(--color-navy) 32%, rgba(11,34,24,0.95) 44%, rgba(11,34,24,0.7) 55%, rgba(11,34,24,0.35) 70%, rgba(11,34,24,0.08) 85%, rgba(11,34,24,0) 100%)",
         }}
       />
-      {/* Subtle vertical bottom-fade so river/rocks blend gracefully */}
+      {/* Bottom fade */}
       <div
         className="absolute inset-x-0 bottom-0 h-[180px] -z-0 hidden md:block"
         style={{
           background:
-            "linear-gradient(180deg, transparent 0%, rgba(13,27,62,0.4) 100%)",
+            "linear-gradient(180deg, transparent 0%, rgba(11,34,24,0.4) 100%)",
         }}
       />
-      {/* Mobile uniform overlay */}
+      {/* Mobile overlay */}
       <div
         className="absolute inset-0 -z-0 md:hidden"
-        style={{ background: "rgba(8,18,46,0.78)" }}
+        style={{ background: "rgba(6,15,10,0.80)" }}
       />
 
-      {/* Padding pushes content below header */}
-      <div
-        className="relative w-full max-w-[1480px] mx-auto px-5 sm:px-7 lg:px-10 flex flex-col h-full hero-content"
-      >
+      <div className="relative w-full max-w-[1480px] mx-auto px-5 sm:px-7 lg:px-10 flex flex-col h-full hero-content">
         <div className="flex-1 flex items-center py-4 md:py-6">
           <div className="w-full md:w-[44%] max-w-[600px]">
-            <div className="prehad mb-4 text-[11px] sm:text-[12px]">EXPLORE THE VIBRANT</div>
+            <div className="prehad mb-4 text-[11px] sm:text-[12px]">EXPLORE THE MAJESTIC</div>
 
             <h1
               className="font-[family-name:var(--font-cinzel)] font-extrabold text-white leading-[1.05] tracking-tight"
               style={{ fontSize: "clamp(32px, 4vw, 52px)" }}
             >
-              <span className="block">GUJARAT</span>
+              <span className="block">UTTARAKHAND</span>
               <span className="block mt-1.5">WITH THE BEST</span>
               <span className="block mt-1.5 text-[var(--color-gold)]">TOUR PACKAGES</span>
             </h1>
@@ -92,9 +87,9 @@ export default function Hero() {
             </div>
 
             <p className="text-white/95 text-[14px] sm:text-[15px] max-w-md leading-relaxed">
-              Pilgrimage, Heritage, Wildlife &amp; Family Tours
+              Hill Stations, Char Dham, Wildlife Safaris &amp; Adventure Tours
               <br />
-              Tailored for Unforgettable Experiences.
+              Tailored for Unforgettable Himalayan Experiences.
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -124,7 +119,7 @@ export default function Hero() {
           <div
             className="rounded-xl border border-[rgba(201,146,42,0.28)]"
             style={{
-              background: "rgba(13,27,62,0.55)",
+              background: "rgba(11,34,24,0.55)",
               backdropFilter: "blur(14px)",
               WebkitBackdropFilter: "blur(14px)",
               boxShadow: "0 8px 32px rgba(0,0,0,0.25)",

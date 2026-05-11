@@ -71,9 +71,9 @@ async function sendEmail(c: {
   const from = process.env.INQUIRY_FROM_EMAIL;
   if (!apiKey || !to || !from) return { sent: false, reason: "not-configured" };
 
-  const subject = `[Gujarat Tour Packages] Inquiry from ${c.fullName} — ${c.packageName}`;
+  const subject = `[Uttarakhand Tour Packages] Inquiry from ${c.fullName} — ${c.packageName}`;
   const text = [
-    "New inquiry from Gujarat Tour Packages website",
+    "New inquiry from Uttarakhand Tour Packages website",
     "=".repeat(56),
     "",
     `Name           : ${c.fullName}`,

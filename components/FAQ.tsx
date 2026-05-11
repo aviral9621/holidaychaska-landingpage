@@ -5,13 +5,13 @@ import { ShieldCheck, RibbonIcon, HeadsetIcon, WhatsAppIcon } from "./Icons";
 import { waUrl } from "@/lib/whatsapp";
 
 const FAQS = [
-  { q: "How can I book a tour package?", a: "Click \"Enquire Now\" on any package, fill the short form, and our travel expert will contact you within 2 hours to guide you through booking." },
-  { q: "Can I customise my tour package?", a: "Absolutely! All our packages are fully customizable. Share your preferred dates, number of travelers, accommodation type, and interests — we'll build a plan just for you." },
-  { q: "How soon will I receive a quotation?", a: "Within 2 working hours of your inquiry, our travel expert will call or WhatsApp you with a detailed, no-obligation quotation." },
-  { q: "Are hotels and transport included?", a: "Yes. All packages include AC vehicle transfers and hotel accommodation on double/triple sharing basis. Daily breakfast is included as a minimum; additional meals vary per package." },
-  { q: "Do you provide group discounts?", a: "Yes, we offer special group pricing for parties of 10 or more. WhatsApp us for a custom group quotation." },
-  { q: "How can I contact you on WhatsApp?", a: "Click any WhatsApp button on the site. We're available 9 AM – 9 PM, 7 days a week." },
-  { q: "Is my payment and personal data secure?", a: "Yes. All payments go through encrypted, verified payment gateways. Your personal data is never sold or shared with third parties." },
+  { q: "How can I book an Uttarakhand tour package?", a: "Click \"Enquire Now\" on any package, fill the short form, and our travel expert will contact you within 2 hours to guide you through booking — completely hassle-free." },
+  { q: "Can I customise my Uttarakhand tour?", a: "Absolutely! All our packages are fully customizable. Share your preferred dates, number of travelers, accommodation type, and interests — we'll build a personalized Himalayan itinerary just for you." },
+  { q: "How soon will I receive a quotation?", a: "Within 2 working hours of your inquiry, our travel expert will call or WhatsApp you with a detailed, no-obligation quotation tailored to your requirements." },
+  { q: "Are hotels and transport included?", a: "Yes. All packages include AC vehicle transfers on hill routes and hotel accommodation on double/triple sharing basis. Daily breakfast is included as a minimum; additional meals vary per package." },
+  { q: "What is the best time to visit Uttarakhand?", a: "March–June is ideal for hill stations and trekking. October–November is perfect for clear mountain views. December–February is great for snow and skiing at Auli. Avoid monsoons (July–September) for road travel." },
+  { q: "Do you offer Char Dham Yatra packages?", a: "Yes! We offer complete Char Dham Yatra packages covering Yamunotri, Gangotri, Kedarnath, and Badrinath with temple registrations, accommodation, and guided assistance throughout." },
+  { q: "Do you provide group discounts?", a: "Yes, we offer special group pricing for parties of 10 or more. WhatsApp us for a custom group quotation with extra savings." },
   { q: "What is the cancellation and refund policy?", a: "Cancellations 30+ days before travel: 90% refund. 15–29 days: 50%. Under 15 days: no refund. See our Refund Policy page for complete details." },
 ];
 
@@ -19,19 +19,19 @@ const BENEFITS = [
   {
     Icon: ShieldCheck,
     title: "Trusted & Reliable",
-    desc: "10+ years of experience in crafting memorable Gujarat journeys.",
+    desc: "10+ years of experience crafting memorable Uttarakhand journeys for thousands of travelers.",
     descShort: "10+ Years Experience",
   },
   {
     Icon: RibbonIcon,
     title: "Tailored Itineraries",
-    desc: "Custom-crafted journeys designed around your preferences.",
+    desc: "Custom-crafted Himalayan journeys designed around your preferences and travel style.",
     descShort: "Custom-Crafted for You",
   },
   {
     Icon: HeadsetIcon,
     title: "24/7 Travel Support",
-    desc: "Our team is always available to assist you anytime, anywhere.",
+    desc: "Our team is always available to assist you anytime — on mountain roads or in valley towns.",
     descShort: "We're Here for You Anytime",
   },
 ];
@@ -62,7 +62,7 @@ function PlusMinus({ open }: { open: boolean }) {
 
 function BenefitCard({ Icon, title, desc }: { Icon: typeof ShieldCheck; title: string; desc: string }) {
   return (
-    <div className="flex items-start gap-4 bg-white rounded-xl border border-[#EFE3C8] p-4 shadow-[0_4px_18px_rgba(13,27,62,0.05)]">
+    <div className="flex items-start gap-4 bg-white rounded-xl border border-[#C8DEB8] p-4 shadow-[0_4px_18px_rgba(11,34,24,0.05)]">
       <div className="w-12 h-12 rounded-full bg-[var(--color-navy)] text-[var(--color-gold)] flex items-center justify-center flex-shrink-0">
         <Icon width={22} height={22} />
       </div>
@@ -99,10 +99,10 @@ export default function FAQ() {
       className="relative py-16 md:py-24 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, var(--color-cream) 0%, #F7EED5 100%)",
+          "linear-gradient(180deg, var(--color-cream) 0%, #E6F0DC 100%)",
       }}
     >
-      {/* Decorative mandala corners — desktop only */}
+      {/* Decorative mandala corners */}
       <svg
         className="absolute top-8 left-4 lg:left-12 w-32 lg:w-44 h-32 lg:h-44 text-[var(--color-gold)] opacity-[0.18] pointer-events-none hidden md:block"
         viewBox="0 0 100 100"
@@ -158,18 +158,18 @@ export default function FAQ() {
             <span className="w-12 h-px bg-[var(--color-gold)]/60" />
           </div>
           <p className="text-[15px] text-[#5B6677] leading-relaxed">
-            Find answers to the most common questions about our Gujarat tour
+            Find answers to the most common questions about our Uttarakhand tour
             packages and services.
           </p>
         </div>
 
-        {/* MOBILE: image + 3 compact benefits inside one card */}
+        {/* MOBILE: image + 3 compact benefits */}
         <div className="lg:hidden mb-8">
-          <div className="relative rounded-2xl overflow-hidden border border-[#EFE3C8] bg-white shadow-[0_8px_24px_rgba(13,27,62,0.08)]">
+          <div className="relative rounded-2xl overflow-hidden border border-[#C8DEB8] bg-white shadow-[0_8px_24px_rgba(11,34,24,0.08)]">
             <div className="relative w-full aspect-[16/11]">
               <Image
-                src="/faq-image.png"
-                alt="Camel cart at sunset in the Rann of Kutch desert"
+                src="/faq-image.jpg"
+                alt="Auli ski slopes with stunning Himalayan snow peaks in Uttarakhand"
                 fill
                 className="object-cover"
                 sizes="100vw"
@@ -185,17 +185,17 @@ export default function FAQ() {
 
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* FAQ Accordion column */}
+          {/* FAQ Accordion */}
           <div className="lg:col-span-7 space-y-3">
             {FAQS.map((f, i) => {
               const isOpen = open === i;
               return (
                 <div
                   key={i}
-                  className={`rounded-xl bg-white shadow-[0_2px_10px_rgba(13,27,62,0.04)] transition-all duration-300 overflow-hidden ${
+                  className={`rounded-xl bg-white shadow-[0_2px_10px_rgba(11,34,24,0.04)] transition-all duration-300 overflow-hidden ${
                     isOpen
-                      ? "border border-[#EFE3C8] border-l-[3px] border-l-[var(--color-gold)] shadow-[0_6px_22px_rgba(13,27,62,0.08)]"
-                      : "border border-[#EFE3C8]"
+                      ? "border border-[#C8DEB8] border-l-[3px] border-l-[var(--color-gold)] shadow-[0_6px_22px_rgba(11,34,24,0.08)]"
+                      : "border border-[#C8DEB8]"
                   }`}
                 >
                   <button
@@ -221,8 +221,8 @@ export default function FAQ() {
               );
             })}
 
-            {/* Still have questions card */}
-            <div className="mt-5 rounded-xl bg-white border border-[#EFE3C8] p-5 sm:p-6 shadow-[0_2px_10px_rgba(13,27,62,0.04)] flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            {/* Still have questions */}
+            <div className="mt-5 rounded-xl bg-white border border-[#C8DEB8] p-5 sm:p-6 shadow-[0_2px_10px_rgba(11,34,24,0.04)] flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
               <div className="flex items-start gap-4 flex-1">
                 <div className="w-12 h-12 rounded-full bg-[var(--color-gold)]/15 border border-[var(--color-gold)]/30 text-[var(--color-gold)] flex items-center justify-center flex-shrink-0">
                   <HeadsetIcon width={22} height={22} />
@@ -232,7 +232,7 @@ export default function FAQ() {
                     Still have questions?
                   </h4>
                   <p className="text-[13px] text-[#5B6677] mt-0.5">
-                    Our travel experts are here to help you 24/7.
+                    Our Uttarakhand travel experts are here to help you 24/7.
                   </p>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function FAQ() {
                 href={waUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-[var(--color-navy)] hover:bg-[var(--color-navy-mid)] text-white font-semibold text-[14px] transition flex-shrink-0 shadow-[0_4px_14px_rgba(13,27,62,0.2)]"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-[var(--color-navy)] hover:bg-[var(--color-navy-mid)] text-white font-semibold text-[14px] transition flex-shrink-0 shadow-[0_4px_14px_rgba(11,34,24,0.2)]"
               >
                 <WhatsAppIcon width={18} height={18} />
                 <span>Chat on WhatsApp</span>
@@ -248,12 +248,12 @@ export default function FAQ() {
             </div>
           </div>
 
-          {/* DESKTOP: image + 3 stacked benefit cards on the right */}
+          {/* DESKTOP: image + benefit cards */}
           <div className="hidden lg:flex lg:col-span-5 flex-col gap-4 sticky top-28">
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_30px_rgba(13,27,62,0.12)] border border-[#EFE3C8] aspect-[5/4]">
+            <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_30px_rgba(11,34,24,0.12)] border border-[#C8DEB8] aspect-[5/4]">
               <Image
-                src="/faq-image.png"
-                alt="Camel cart at sunset in the Rann of Kutch desert"
+                src="/faq-image.jpg"
+                alt="Auli ski slopes with stunning Himalayan snow peaks in Uttarakhand"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 0px, 40vw"

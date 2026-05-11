@@ -89,7 +89,7 @@ export default function Footer() {
         className="absolute inset-0 pointer-events-none -z-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(8,18,46,0.88) 0%, rgba(13,27,62,0.82) 50%, rgba(8,18,46,0.95) 100%)",
+            "linear-gradient(180deg, rgba(6,15,10,0.88) 0%, rgba(11,34,24,0.82) 50%, rgba(6,15,10,0.95) 100%)",
         }}
         aria-hidden
       />
@@ -110,15 +110,15 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <Image
               src="/new logo.png"
-              alt="Gujarat Tour Packages — A Holiday Chaska Company"
+              alt="Uttarakhand Tour Packages — A Holiday Chaska Company"
               width={320}
               height={84}
               style={{ width: "auto", height: 88 }}
               className="object-contain object-left mb-5"
             />
             <p className="text-[14px] text-white/70 leading-relaxed mb-6 max-w-sm">
-              We offer the best Gujarat tour packages with reliable service,
-              comfortable travel and unforgettable experiences.
+              We offer the best Uttarakhand tour packages — Himalayan adventures, hill stations,
+              sacred Char Dham, and wildlife safaris with reliable service and unforgettable experiences.
             </p>
 
             {/* Trust card */}
@@ -141,7 +141,7 @@ export default function Footer() {
                   </h5>
                   <p className="text-white/70 text-[12.5px] leading-snug">
                     Committed to providing safe, reliable and memorable journeys
-                    across Gujarat.
+                    across Uttarakhand and the Himalayas.
                   </p>
                 </div>
               </div>
@@ -244,14 +244,14 @@ export default function Footer() {
                 </span>
                 <div className="text-[13px] leading-snug pt-1">
                   <div className="text-[var(--color-gold)] font-semibold uppercase tracking-wider text-[11px] mb-1">
-                    Gujarat Travel Desk
+                    Uttarakhand Travel Desk
                   </div>
                   <p className="text-white/80">
-                    409, Titanium City Centre Mall,
+                    Rajpur Road, Near Clock Tower,
                     <br />
-                    Satellite, Ahmedabad,
+                    Dehradun,
                     <br />
-                    Gujarat – 380015
+                    Uttarakhand – 248001
                   </p>
                 </div>
               </div>
@@ -320,7 +320,7 @@ export default function Footer() {
       >
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 relative">
           <p className="text-[12px] text-white/55 order-2 sm:order-1">
-            © 2025 Gujarat Tour Packages. All Rights Reserved.
+            © 2025 Uttarakhand Tour Packages. All Rights Reserved.
           </p>
           <span
             className="text-[var(--color-gold)]/40 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block"

@@ -4,7 +4,7 @@ export const PHONE_TEL = "+919717580259";
 export const SUPPORT_EMAIL = "enquiry@holidaychaska.com";
 
 export const WA_DEFAULT_MSG =
-  "Hi! I'm interested in Gujarat Tour Packages. Please share details.";
+  "Hi! I'm interested in Uttarakhand Tour Packages. Please share details.";
 
 export function waUrl(message: string = WA_DEFAULT_MSG): string {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --color-navy:        #0D1B3E;
-  --color-navy-mid:    #112244;
-  --color-navy-dark:   #060E20;
+  --color-navy:        #0B2218;
+  --color-navy-mid:    #12311F;
+  --color-navy-dark:   #060F0A;
   --color-gold:        #C9922A;
   --color-gold-light:  #E8B84B;
-  --color-cream:       #FAF3E0;
+  --color-cream:       #F0F5E8;
   --color-white:       #FFFFFF;
-  --color-text-dark:   #1A1A2E;
-  --color-muted:       #8899AA;
+  --color-text-dark:   #1A2E1A;
+  --color-muted:       #7A9A8A;
   --color-green-wa:    #25D366;
-  --color-border:      #2A3A5E;
+  --color-border:      #1E3B28;
   --color-error:       #E53935;
 
   --shadow-card:       0 4px 24px rgba(0,0,0,0.10);
@@ -21,16 +21,16 @@
 }
 
 @theme inline {
-  --color-navy:        #0D1B3E;
-  --color-navy-mid:    #112244;
-  --color-navy-dark:   #060E20;
+  --color-navy:        #0B2218;
+  --color-navy-mid:    #12311F;
+  --color-navy-dark:   #060F0A;
   --color-gold:        #C9922A;
   --color-gold-light:  #E8B84B;
-  --color-cream:       #FAF3E0;
-  --color-text-dark:   #1A1A2E;
-  --color-muted:       #8899AA;
+  --color-cream:       #F0F5E8;
+  --color-text-dark:   #1A2E1A;
+  --color-muted:       #7A9A8A;
   --color-green-wa:    #25D366;
-  --color-border-warm: #2A3A5E;
+  --color-border-warm: #1E3B28;
   --color-error:       #E53935;
   --font-display:  var(--font-cinzel);
   --font-heading:  var(--font-playfair);

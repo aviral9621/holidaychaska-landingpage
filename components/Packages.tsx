@@ -7,7 +7,7 @@ export default function Packages() {
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
         <div className="text-center mb-12">
           <div className="prehad mb-3">HANDPICKED EXPERIENCES</div>
-          <h2 className="h2-section text-[var(--color-navy)]">Top Gujarat Tour Packages</h2>
+          <h2 className="h2-section text-[var(--color-navy)]">Top Uttarakhand Tour Packages</h2>
           <div className="gold-divider"><span>❖</span></div>
           <p className="text-[var(--color-muted)] text-base">
             Customizable packages for every kind of traveler
