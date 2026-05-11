@@ -6,27 +6,36 @@ import { waUrl, PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
 
 const REDIRECT_SECONDS = 15;
 
-function subscribeSearch(cb: () => void) {
-  if (typeof window === "undefined") return () => {};
-  window.addEventListener("popstate", cb);
-  return () => window.removeEventListener("popstate", cb);
+function subscribeNoop() {
+  return () => {};
 }
-function getSearchSnapshot() {
-  return typeof window === "undefined" ? "" : window.location.search;
+function getSuccessSnapshot() {
+  if (typeof window === "undefined") return "";
+  try {
+    return sessionStorage.getItem("inquirySuccess") || "";
+  } catch {
+    return "";
+  }
 }
-function getServerSearchSnapshot() {
+function getServerSuccessSnapshot() {
   return "";
 }
 
 export default function ThankYouPage() {
-  const search = useSyncExternalStore(
-    subscribeSearch,
-    getSearchSnapshot,
-    getServerSearchSnapshot
+  const raw = useSyncExternalStore(
+    subscribeNoop,
+    getSuccessSnapshot,
+    getServerSuccessSnapshot
   );
-  const params = new URLSearchParams(search);
-  const name = params.get("name") || "";
-  const phone = params.get("phone") || "";
+  let name = "";
+  let phone = "";
+  if (raw) {
+    try {
+      const parsed = JSON.parse(raw) as { name?: unknown; phone?: unknown };
+      if (typeof parsed.name === "string") name = parsed.name;
+      if (typeof parsed.phone === "string") phone = parsed.phone;
+    } catch {}
+  }
 
   const [seconds, setSeconds] = useState(REDIRECT_SECONDS);
   const cancelled = useRef(false);

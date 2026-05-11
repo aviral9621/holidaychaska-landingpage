@@ -129,11 +129,13 @@ export default function InquiryForm({ prefilledPackage }: Props) {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Bad response");
-      const params = new URLSearchParams({
-        name: form.fullName,
-        phone: form.phone,
-      });
-      window.location.href = `/thank-you/?${params.toString()}`;
+      try {
+        sessionStorage.setItem(
+          "inquirySuccess",
+          JSON.stringify({ name: form.fullName, phone: form.phone })
+        );
+      } catch {}
+      window.location.href = "/thank-you/";
     } catch {
       setServerError("Something went wrong. Please WhatsApp us directly.");
       setSubmitting(false);
