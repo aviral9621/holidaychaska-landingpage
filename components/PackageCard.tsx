@@ -100,7 +100,7 @@ export default function PackageCard({ pkg }: { pkg: TourPackage }) {
             className="btn-gold !py-2.5 !px-3 !text-[12px]"
             onClick={() => openModal(pkg.name)}
           >
-            Enquiry Now
+            Enquire Now
           </button>
         </div>
       </div>

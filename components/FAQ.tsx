@@ -5,7 +5,7 @@ import { ShieldCheck, RibbonIcon, HeadsetIcon, WhatsAppIcon } from "./Icons";
 import { waUrl } from "@/lib/whatsapp";
 
 const FAQS = [
-  { q: "How can I book a tour package?", a: "Click \"Enquiry Now\" on any package, fill the short form, and our travel expert will contact you within 2 hours to guide you through booking." },
+  { q: "How can I book a tour package?", a: "Click \"Enquire Now\" on any package, fill the short form, and our travel expert will contact you within 2 hours to guide you through booking." },
   { q: "Can I customise my tour package?", a: "Absolutely! All our packages are fully customizable. Share your preferred dates, number of travelers, accommodation type, and interests — we'll build a plan just for you." },
   { q: "How soon will I receive a quotation?", a: "Within 2 working hours of your inquiry, our travel expert will call or WhatsApp you with a detailed, no-obligation quotation." },
   { q: "Are hotels and transport included?", a: "Yes. All packages include AC vehicle transfers and hotel accommodation on double/triple sharing basis. Daily breakfast is included as a minimum; additional meals vary per package." },

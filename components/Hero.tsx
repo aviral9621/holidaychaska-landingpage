@@ -105,7 +105,7 @@ export default function Hero() {
               </a>
               <button type="button" onClick={() => openModal()} className="hero-cta hero-cta-outline">
                 <PhoneIcon width={15} height={15} />
-                <span>Enquiry Now</span>
+                <span>Enquire Now</span>
               </button>
             </div>
 

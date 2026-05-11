@@ -107,7 +107,7 @@ export default function Header() {
               className="hidden xl:inline-flex header-btn header-btn-gold"
             >
               <PhoneIcon width={15} height={15} />
-              <span>Enquiry Now</span>
+              <span>Enquire Now</span>
             </button>
             <a
               href={waUrl()}
@@ -203,7 +203,7 @@ export default function Header() {
                 className="header-btn header-btn-gold inline-flex justify-center"
               >
                 <PhoneIcon width={15} height={15} />
-                <span>Enquiry Now</span>
+                <span>Enquire Now</span>
               </button>
               <a
                 href={waUrl()}
