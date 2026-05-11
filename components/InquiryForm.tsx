@@ -8,7 +8,7 @@ import { waUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon, CheckIcon, ArrowRight, ShieldCheck } from "./Icons";
 
 const INQUIRY_ENDPOINT =
-  process.env.NEXT_PUBLIC_INQUIRY_ENDPOINT || "/api/inquiry";
+  process.env.NEXT_PUBLIC_INQUIRY_ENDPOINT || "/api/inquiry/";
 
 type Props = {
   prefilledPackage?: string;
